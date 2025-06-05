@@ -66,7 +66,7 @@ ${translatedTafsirEnglish.text}`;
           forwardingScore: 999,  
           isForwarded: true,   
           forwardedNewsletterMessageInfo: {
-            newsletterJid: '120363354023106228@newsletter', 
+            newsletterJid: '120363387497418815@newsletter', 
             newsletterName: 'DmlTech', 
             serverMessageId: 143
           }
