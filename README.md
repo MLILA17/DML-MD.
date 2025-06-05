@@ -8,9 +8,9 @@
 
 <div align="center">
   <a href="https://github.com/MLILA17/followers"><img title="Followers" src="https://img.shields.io/github/followers/MLILA1736?color=EB5406&style=for-the-badge&logo=github&logoColor=white"></a>
-  <a href="https://github.com/MLILA17/ROCK-NET/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/MLILA1736/KHAN-MD?color=FFCE44&style=for-the-badge&logo=reverbnation&logoColor=white"></a>
-  <a href="https://github.com/JawadYT36/ROCK-NET/network/members"><img title="Forks" src="https://github.com/MLILA17/ROCK-NET/forks?color=FF007F&style=for-the-badge&logo=git&logoColor=white"></a>
-  <a href="https://github.com/JawadYT36/KHAN-MD/"><img title="Size" src="https://img.shields.io/github/repo-size/JawadYT36/KHAN-MD?style=for-the-badge&color=FFFF00&logo=docusign&logoColor=white"></a>
+  <a href="https://github.com/MLILA17/ROCK-NET/stargazers"><img title="Stars" src="https://img.shields.io/github/stars/MLILA1736/KHAN-MD?color=FFCE44&style=for-the-badge&logo=reverbnation&logoColor=white"></a>
+  <a href="https://github.com/MLILA17/ROCK-NET/network/members"><img title="Forks" src="https://github.com/MLILA17/ROCK-NET/forks?color=FF007F&style=for-the-badge&logo=git&logoColor=white"></a>
+  <a href="https://github.com/MLILA17/ROCK-NET/"><img title="Size" src="https://img.shields.io/github/repo-size/MLILA17/ROCK-NET?style=for-the-badge&color=FFFF00&logo=docusign&logoColor=white"></a>
   <a href="https://github.com/MLILA17/ROCK-NET/graphs/commit-activity"><img height="28" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=for-the-badge&logo=gitpod&logoColor=white"></a>
 </div>
 
