@@ -4,7 +4,7 @@ const axios = require("axios");
 cmd({
     pattern: "img",
     alias: ["image", "googleimage", "searchimg"],
-    react: "🦋",
+    react: "🚀",
     desc: "Search and download Google images",
     category: "fun",
     use: ".img <keywords>",
@@ -37,7 +37,7 @@ cmd({
                 from,
                 { 
                     image: { url: imageUrl },
-                    caption: `📷 Result for: ${query}\n> © Powered by JawadTechX`
+                    caption: `📷 Result for: ${query}\n> © Powered by DML`
                 },
                 { quoted: mek }
             );
