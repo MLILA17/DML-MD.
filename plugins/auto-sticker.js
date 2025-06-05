@@ -20,7 +20,7 @@ async (conn, mek, m, { from, body }) => {
 
                     await conn.sendMessage(from, {
                         sticker: stickerBuffer,
-                        packname: 'KHAN-AI',
+                        packname: 'DML-AI',
                         author: 'AUTO-STICKER'
                     }, { quoted: mek });
                 } else {
