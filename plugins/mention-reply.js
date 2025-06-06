@@ -40,13 +40,13 @@ cmd({
           forwardingScore: 999,
           isForwarded: true,
           externalAdReply: {
-            title: config.BOT_NAME || "KHAN-MD 🥀",
-            body: config.DESCRIPTION || "POWERED BY JAWAD TECHX 🤌💗",
+            title: config.BOT_NAME || "DML-MD 🥀",
+            body: config.DESCRIPTION || "POWERED BY DML TECH 🤌💗",
             mediaType: 1,
             renderLargerThumbnail: true,
             thumbnail: thumbnailBuffer,
-            mediaUrl: "https://files.catbox.moe/l2t3e0.jpg", // Static image URL
-            sourceUrl: "https://wa.me/message/INB2QVGXHQREO1",
+            mediaUrl: "https://files.catbox.moe/vcdwmp.jpg", // Static image URL
+            sourceUrl: "https://wa.me/message/255622220680",
             showAdAttribution: true
           }
         }
