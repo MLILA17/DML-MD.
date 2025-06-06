@@ -1,4 +1,4 @@
-// Jawad TechX - KHAN MD 
+// DAUDY MLILA17 - DML MD 
 // Dont Remove Credit From File 
 
 const { cmd } = require("../command");
