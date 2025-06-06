@@ -35,7 +35,7 @@ cmd({
         // Send result
         await client.sendMessage(from, {
             image: imageBuffer,
-            caption: "> Powered By JawadTechX 🤍",
+            caption: "> POWERED BT DML-TECH 🤍",
             mimetype: 'image/png'
         }, { quoted: message });
 
