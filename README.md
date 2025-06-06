@@ -29,7 +29,7 @@
 Help support the project by clicking the buttons below. Fork it to your GitHub and give it a star!
 
 
-[![Fork](https://img.shields.io/github/forks/MLILA17/ROCK-NET?label=Fork&style=for-the-badge&logo=git)](https://github.com/MLILA17/ROCK-NET/fork)
+[![Fork](https://img.shields.io/github/forks/MLILA17/ROCK-NET?label=Fork&style=for-the-badge&logo=git)]([https://github.com/MLILA17/ROCK-NET/fork)
 [![Star](https://img.shields.io/github/stars/MLILA17/ROCK-NET?label=Star&style=for-the-badge&logo=github)](https://github.com/MLILA17/ROCK-NET/stargazers)
 
 
