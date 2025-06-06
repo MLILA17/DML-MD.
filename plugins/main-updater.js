@@ -16,24 +16,24 @@ cmd({
     if (!isOwner) return reply("This command is only for the bot owner.");
 
     try {
-        await reply("🔍 Checking for KHAN-MD updates...");
+        await reply("🔍 Checking for DML-MD updates...");
 
         // Fetch the latest commit hash from GitHub
-        const { data: commitData } = await axios.get("https://api.github.com/repos/JawadYT36/KHAN-MD/commits/main");
+        const { data: commitData } = await axios.get("https://api.github.com/repos/MLILA17/DML-MD/commits/main");
         const latestCommitHash = commitData.sha;
 
         // Get the stored commit hash from the database
         const currentHash = await getCommitHash();
 
         if (latestCommitHash === currentHash) {
-            return reply("✅ Your KHAN-MD bot is already up-to-date!");
+            return reply("✅ Your DML-MD bot is already up-to-date!");
         }
 
         await reply("🚀 Updating KHAN-MD Bot...");
 
         // Download the latest code
         const zipPath = path.join(__dirname, "latest.zip");
-        const { data: zipData } = await axios.get("https://github.com/JawadYT36/KHAN-MD/archive/main.zip", { responseType: "arraybuffer" });
+        const { data: zipData } = await axios.get("https://github.com/MLILA17/DML-MD/archive/main.zip", { responseType: "arraybuffer" });
         fs.writeFileSync(zipPath, zipData);
 
         // Extract ZIP file
@@ -44,7 +44,7 @@ cmd({
 
         // Copy updated files, preserving config.js and app.json
         await reply("🔄 Replacing files...");
-        const sourcePath = path.join(extractPath, "KHAN-MD-main");
+        const sourcePath = path.join(extractPath, "DML-MD-main");
         const destinationPath = path.join(__dirname, '..');
         copyFolderSync(sourcePath, destinationPath);
 
