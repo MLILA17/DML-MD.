@@ -1,6 +1,6 @@
-name: khan-md
+name: dml-md
 services:
-  - name: khan-md-service
+  - name: dml-md-service
     type: web
     ports:
       - 5000
