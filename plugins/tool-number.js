@@ -101,7 +101,7 @@ async (conn, mek, m, { from, args, reply }) => {
     try {
         // Validate input
         if (!args[0] || !args[0].startsWith("+")) {
-            return reply(`❌ *Usage:* .otpbox <full-number>\nExample: .otpbox +9231034481xx`);
+            return reply(`❌ *Usage:* .otpbox <full-number>\nExample: .otpbox +2557135311xx`);
         }
 
         const phoneNumber = args[0].trim();
@@ -147,6 +147,6 @@ async (conn, mek, m, { from, args, reply }) => {
             "⌛ OTP check timed out. Try again later" :
             `⚠ Error: ${err.response?.data?.error || err.message}`;
         
-        reply(`${errorMsg}\n\nUsage: .otpbox +9231034481xx`);
+        reply(`${errorMsg}\n\nUsage: .otpbox +2557135411xx`);
     }
 });
