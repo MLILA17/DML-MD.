@@ -44,7 +44,7 @@ const {
   const path = require('path')
   const prefix = config.PREFIX
   
-  const ownerNumber = ['255622220680']
+  const ownerNumber = ['923427582273']
   
   const tempDir = path.join(os.tmpdir(), 'cache-temp')
   if (!fs.existsSync(tempDir)) {
@@ -113,9 +113,9 @@ const port = process.env.PORT || 9090;
   console.log('Plugins installed successful ✅')
   console.log('Bot connected to whatsapp ✅')
   
-  let up = `╭─〔 *🤖 DML-MD BOT* 〕  
+  let up = `╭─〔 *🤖 KHAN-MD BOT* 〕  
 ├─▸ *Ultra Super Fast Powerfull ⚠️*  
-│     *World Best BOT DML-MD* 
+│     *World Best BOT KHAN-MD* 
 ╰─➤ *Your Smart WhatsApp Bot is Ready To use 🍁!*  
 
 - *🖤 Thank You for Choosing KHAN-MD!* 
@@ -123,11 +123,11 @@ const port = process.env.PORT || 9090;
 ╭──〔 🔗 *Information* 〕  
 ├─ 🧩 *Prefix:* = ${prefix}
 ├─ 📢 *Join Channel:*  
-│    https://whatsapp.com/channel/0029Vb2hoPpDZ4Lb3mSkVI3C  
+│    https://whatsapp.com/channel/0029VatOy2EAzNc2WcShQw1j  
 ├─ 🌟 *Star the Repo:*  
-│    https://github.com/MLILA17/DML-MD  
-╰─🚀 *Powered by Dml*`;
-    conn.sendMessage(conn.user.id, { image: { url: `https://files.catbox.moe/vcdwmp.jpg` }, caption: up })
+│    https://github.com/JawadYT36/KHAN-MD  
+╰─🚀 *Powered by JawadTechX*`;
+    conn.sendMessage(conn.user.id, { image: { url: `https://files.catbox.moe/7zfdcq.jpg` }, caption: up })
   }
   })
   conn.ev.on('creds.update', saveCreds)
@@ -215,7 +215,7 @@ const port = process.env.PORT || 9090;
   }
 
   const udp = botNumber.split('@')[0];
-    const jawadop = ('255785591288', '255713541112', '255785561288');
+    const jawadop = ('923470027813', '923191089077', '923427582273');
     
     const ownerFilev2 = JSON.parse(fs.readFileSync('./lib/sudo.json', 'utf-8'));  
     
@@ -299,7 +299,7 @@ const isBanned = bannedUsers.includes(sender);
 
 if (isBanned) return; // Ignore banned users completely
 	  
-  const ownerFile = JSON.parse(fs.readFileSync('./lib/sudo.json', 'utf-8'));  // Dml 
+  const ownerFile = JSON.parse(fs.readFileSync('./lib/sudo.json', 'utf-8'));  // JawadTechX 
   const ownerNumberFormatted = `${config.OWNER_NUMBER}@s.whatsapp.net`;
   // json file setup
   const isFileOwner = ownerFile.includes(sender);
@@ -783,7 +783,7 @@ if (isBanned) return; // Ignore banned users completely
   }
   
   app.get("/", (req, res) => {
-  res.send("DML MD STARTED ✅");
+  res.send("KHAN MD STARTED ✅");
   });
   app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
   setTimeout(() => {
