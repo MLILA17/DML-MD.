@@ -70,7 +70,7 @@ const url = data.url
     
     
 let desc = `
-*⫷⦁ALI-MD-V1 VⵊDEO DOWNLOADⵊNG⦁⫸*
+*⫷⦁DML-MD-V1 VⵊDEO DOWNLOADⵊNG⦁⫸*
 
 🎥 *VⵊDEO FOUND!* 
 
@@ -82,9 +82,9 @@ let desc = `
 
 🎬 *ENJOY THE VIDEO BROUGHT TO YOU!*
 
-> *ALI-MD-V1 WHATSAPP BOT* 
+> *DML-MD-V1 WHATSAPP BOT* 
 
-> *© ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴀʟɪ-ᴍᴅ*
+> *© ᴄPOWERED BY DML-TECH*
 `
 
 await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{quoted:mek});
@@ -96,7 +96,7 @@ let downloadUrl = down.dl_url
 
 //send video message
 await conn.sendMessage(from,{video: {url:downloadUrl},mimetype:"video/mp4"},{quoted:mek})
-await conn.sendMessage(from,{document: {url:downloadUrl},mimetype:"video/mp4",fileName:data.title + ".mp4",caption:"*© ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴀʟɪ-ᴍᴅ*"},{quoted:mek})
+await conn.sendMessage(from,{document: {url:downloadUrl},mimetype:"video/mp4",fileName:data.title + ".mp4",caption:"*© CREATED BY DML-TECH*"},{quoted:mek})
 
 }catch(e){
 console.log(e)
