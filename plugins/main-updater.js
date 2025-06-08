@@ -29,7 +29,7 @@ cmd({
             return reply("✅ Your DML-MD bot is already up-to-date!");
         }
 
-        await reply("🚀 Updating KHAN-MD Bot...");
+        await reply("🚀 Updating DML-MD Bot...");
 
         // Download the latest code
         const zipPath = path.join(__dirname, "latest.zip");
