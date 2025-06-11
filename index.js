@@ -118,7 +118,7 @@ const port = process.env.PORT || 9090;
 │     *World Best BOT DML-MD* 
 ╰─➤ *Your Smart WhatsApp Bot is Ready To use 🍁!*  
 
-- *🖤 Thank You for Choosing DML-MD!* 
+- *🔴 Thank You for Choosing DML-MD!* 
 
 ╭──〔 🔗 *Information* 〕  
 ├─ 🧩 *Prefix:* = ${prefix}
