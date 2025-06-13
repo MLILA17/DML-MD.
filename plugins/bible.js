@@ -3,7 +3,7 @@ const { cmd } = require("../command");
 
 // Command: bible
 cmd({
-    pattern: "bible1",
+    pattern: "bible",
     desc: "Fetch Bible verses by reference.",
     category: "fun",
     react: "📖",
