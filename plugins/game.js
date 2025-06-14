@@ -87,8 +87,10 @@ cmd({
       for (let player of playersToKick) {
         await conn.groupParticipantsUpdate(m.chat, [player.id], "remove");
         let eliminationMessage = isGreenLight
-          ? `❌ @${player.id.split("@")[0]} est resté silencieux pendant 🟩 *Green Light* et a été éliminé et expulsé du groupe.`
-          : `❌ @${player.id.split("@")[0]} a écrit pendant 🟥 *Red Light* et a été éliminé et expulsé du groupe.`;
+          ? `❌ @${player.id.split("@")[0]} remained silent during 🟩 Green Light and was eliminated and removed from the group
+.`
+          : `❌ @${player.id.split("@")[0]} wrote during 🟥 Red Light and was eliminated and removed from the group
+.`;
 
         await conn.sendMessage(m.chat, {
           text: eliminationMessage,
