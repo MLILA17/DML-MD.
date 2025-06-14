@@ -3,7 +3,7 @@ const { cmd } = require("../command");
 
 cmd({
   pattern: "squidgame",
-  desc: "Lancer le jeu Squid Game dans un groupe",
+  desc: "Start the Squid Game in a group",
   category: "fun",
   filename: __filename
 }, async (conn, mek, m, { isAdmin, isOwner, participants, reply }) => {
