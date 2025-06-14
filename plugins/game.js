@@ -87,10 +87,8 @@ cmd({
       for (let player of playersToKick) {
         await conn.groupParticipantsUpdate(m.chat, [player.id], "remove");
         let eliminationMessage = isGreenLight
-          ? `❌ @${player.id.split("@")[0]} remained silent during 🟩 Green Light and was eliminated and removed from the group
-.`
-          : `❌ @${player.id.split("@")[0]} wrote during 🟥 Red Light and was eliminated and removed from the group
-.`;
+          ? `❌ @${player.id.split("@")[0]} remained silent during 🟩 Green Light and was eliminated and removed from the group`
+          : `❌ @${player.id.split("@")[0]} wrote during 🟥 Red Light and was eliminated and removed from the group`;
 
         await conn.sendMessage(m.chat, {
           text: eliminationMessage,
@@ -183,7 +181,7 @@ cmd({
         }
 
         // Annonce du match versus
-        const announcement = `⚽ *Match Versus*\n\n${team1} 🆚 ${team2}\n\n@${sender.split("@")[0]}, choisis le gagnant ! Tu as 30 secondes pour réfléchir.`;
+        const announcement = `⚽ *Match Versus*\n\n${team1} 🆚 ${team2}\n\n@${sender.split("@")[0]}, Choose the winner! You have 30 seconds to decide.`;
         await reply(announcement, { mentions: [sender] });
 
         // Attendre 30 secondes
@@ -193,10 +191,10 @@ cmd({
         const chosenTeam = Math.random() < 0.5 ? team1 : team2;
 
         // Message final annonçant le gagnant
-        const resultMessage = `🏆 *Résultat du Match*\n\nLe gagnant est : ${chosenTeam}🥳\n\n> Ici le resultat😎 @${sender.split("@")[0]} !`;
+        const resultMessage = `🏆 *Résultat du Match*\n\nLe gagnant est : ${chosenTeam}🥳\n\n> Here is the result 😎 😎 @${sender.split("@")[0]} !`;
         await reply(resultMessage, { mentions: [sender] });
     } catch (error) {
         console.error("Error in konami command:", error);
-        reply("❌ Une erreur est survenue lors de l'exécution de la commande konami.");
+        reply("❌ An error occurred while executing the konami command.");
     }
 });
