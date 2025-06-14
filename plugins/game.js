@@ -108,8 +108,8 @@ cmd({
       });
     }
   } catch (error) {
-    console.error("Erreur dans la commande .squidgame:", error);
-    reply("❌ Une erreur s'est produite lors du lancement du Squid Game.");
+    console.error("❌ Error in the .squidgame command:", error);
+    reply("❌ ❌ An error occurred while starting the Squid Game.");
   }
 });
 
