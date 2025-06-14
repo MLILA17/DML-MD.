@@ -19,13 +19,9 @@
   </a> 
 </p>
 
-<div align="center">
-  <a href="https://github.com/MLILA17/followers"><img title="Followers" src="https://img.shields.io/github/followers/MLILA17?color=EB5406&style=for-the-badge&logo=github&logoColor=white"></a>
-  <a href="https://github.com/MLILA17/DML-MD/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/MLILA17/DML-MD?color=FFCE44&style=for-the-badge&logo=reverbnation&logoColor=white"></a>
-  <a href="https://github.com/MLILA17/DML-MD/network/members"><img title="Forks" src="https://img.shields.io/github/forks/MLILA17/DML-MD?color=FF007F&style=for-the-badge&logo=git&logoColor=white"></a>
-  <a href="https://github.com/MLILA17/DML-MD/"><img title="Size" src="https://img.shields.io/github/repo-size/MLILA17/DML-MD?style=for-the-badge&color=FFFF00&logo=docusign&logoColor=white"></a>
-  <a href="https://github.com/MLILA17/DML-MD/graphs/commit-activity"><img height="28" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=for-the-badge&logo=gitpod&logoColor=white"></a>
-</div>
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=DML-MD.&label=VISITORS&style=flat-square&color=0002FF" />
+</p>
 
 
 
