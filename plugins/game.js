@@ -38,11 +38,15 @@ cmd({
     await delay(3000);
 
     // Explication des règles
-    let rulesMessage = `📜 *Règles du Squid Game:*\n\n`
-      + `1️⃣ Pendant 🟥 *Red Light*, les joueurs qui envoient un message seront *éliminés* et *expulsés* du groupe.\n\n`
-      + `2️⃣ Pendant 🟩 *Green Light*, les joueurs doivent envoyer un message. Ceux qui restent silencieux seront éliminés.\n\n`
-      + `3️⃣ Le jeu se termine lorsqu'il ne reste plus qu'un seul joueur.\n\n`
-      + `🏆 Survis pour devenir le *gagnant* !`;
+    let rulesMessage = `📜 Rules of the Squid Game 🦑
+
+1️⃣ During 🟥 Red Light, any player who sends a message will be REMOVED and KICKED OUT of the group.
+
+2️⃣ During 🟩 Green Light, players MUST send a message. Those who stay silent will be ELIMINATED from the game.
+
+3️⃣ 🛑 The game ends when only one player remains.
+
+🏆 Survive to the end to become the TRUE WINNER! 🎉`;
 
     await conn.sendMessage(m.chat, { text: rulesMessage });
 
