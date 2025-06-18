@@ -15,7 +15,7 @@ async (conn, mek, m, { from, reply }) => {
 
     // Array of additional random image URLs
     const randomImageUrls = [
-        "https://files.catbox.moe/ca6put.mp3", // Example random image 1
+        "https://files.catbox.moe/v5we38.jpg", // Example random image 1
         "https://files.catbox.moe/dc8lcl.jpg", // **Replace with actual URL**
         "https://files.catbox.moe/v5we38.jpg", // **Replace with actual URL**
         "https://files.catbox.moe/dc8lcl.jpg", // **Replace with actual URL**
