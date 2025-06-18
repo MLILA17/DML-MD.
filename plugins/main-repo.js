@@ -1,1 +1,256 @@
-const _0x59af5f=_0x10d7;(function(_0x578f17,_0x124c55){const _0x5f3528=_0x10d7,_0x168686=_0x578f17();while(!![]){try{const _0x863a4a=parseInt(_0x5f3528(0x81))/0x1+parseInt(_0x5f3528(0x91))/0x2*(-parseInt(_0x5f3528(0x8c))/0x3)+parseInt(_0x5f3528(0x7f))/0x4+parseInt(_0x5f3528(0x92))/0x5*(-parseInt(_0x5f3528(0x80))/0x6)+parseInt(_0x5f3528(0x82))/0x7*(parseInt(_0x5f3528(0x7d))/0x8)+-parseInt(_0x5f3528(0x75))/0x9*(parseInt(_0x5f3528(0x8f))/0xa)+-parseInt(_0x5f3528(0x69))/0xb*(-parseInt(_0x5f3528(0x79))/0xc);if(_0x863a4a===_0x124c55)break;else _0x168686['push'](_0x168686['shift']());}catch(_0x45135a){_0x168686['push'](_0x168686['shift']());}}}(_0x3586,0x80cb7));const fs=require('fs'),path=require(_0x59af5f(0x78)),fetch=require(_0x59af5f(0x83)),config=require(_0x59af5f(0x6c)),{cmd}=require('../command');function _0x10d7(_0x250c21,_0x4c3748){const _0x35862b=_0x3586();return _0x10d7=function(_0x10d773,_0x454eac){_0x10d773=_0x10d773-0x66;let _0x2b80c6=_0x35862b[_0x10d773];return _0x2b80c6;},_0x10d7(_0x250c21,_0x4c3748);}cmd({'pattern':_0x59af5f(0x84),'alias':['sc','script','info'],'desc':'Fetch\x20information\x20about\x20a\x20GitHub\x20repository.','react':'📂','category':_0x59af5f(0x72),'filename':__filename},async(_0x5b00f3,_0xe9008a,_0x283ef8,{from:_0x5b231e,reply:_0x415d13})=>{const _0x54ce42=_0x59af5f,_0x3409c2='https://github.com/MLILA17/DML-MD';try{const [,_0x5730cd,_0x2d1f1f]=_0x3409c2[_0x54ce42(0x6b)](/github\.com\/([^/]+)\/([^/]+)/),_0x2974c5=await fetch(_0x54ce42(0x7a)+_0x5730cd+'/'+_0x2d1f1f);if(!_0x2974c5['ok'])throw new Error(_0x54ce42(0x7b)+_0x2974c5['status']);const _0xed3d4d=await _0x2974c5[_0x54ce42(0x6f)](),_0x45f0ff=_0x54ce42(0x85)+_0xed3d4d[_0x54ce42(0x6a)]+_0x54ce42(0x6d)+_0xed3d4d['owner'][_0x54ce42(0x70)]+_0x54ce42(0x66)+_0xed3d4d[_0x54ce42(0x7c)]+_0x54ce42(0x88)+_0xed3d4d[_0x54ce42(0x90)]+_0x54ce42(0x76)+_0xed3d4d[_0x54ce42(0x67)]+_0x54ce42(0x7e)+(_0xed3d4d[_0x54ce42(0x8e)]||_0x54ce42(0x86))+_0x54ce42(0x77);await _0x5b00f3[_0x54ce42(0x8d)](_0x5b231e,{'image':{'url':'https://files.catbox.moe/vcdwmp.jpg'},'caption':_0x45f0ff,'contextInfo':{'mentionedJid':[_0x283ef8[_0x54ce42(0x73)]],'forwardingScore':0x3e7,'isForwarded':!![],'forwardedNewsletterMessageInfo':{'newsletterJid':_0x54ce42(0x8a),'newsletterName':'DML','serverMessageId':0x8f}}},{'quoted':_0xe9008a});const _0x2630cf=path[_0x54ce42(0x6e)](__dirname,_0x54ce42(0x74));await _0x5b00f3[_0x54ce42(0x8d)](_0x5b231e,{'audio':fs[_0x54ce42(0x87)](_0x2630cf),'mimetype':'audio/mp4','ptt':!![],'contextInfo':{'mentionedJid':[_0x283ef8[_0x54ce42(0x73)]],'forwardingScore':0x3e7,'isForwarded':!![],'forwardedNewsletterMessageInfo':{'newsletterJid':'120363387497418815@newsletter','newsletterName':_0x54ce42(0x71),'serverMessageId':0x8f}}},{'quoted':_0xe9008a});}catch(_0x1fc503){console[_0x54ce42(0x89)](_0x54ce42(0x68),_0x1fc503),_0x415d13(_0x54ce42(0x8b));}});function _0x3586(){const _0x54cf88=['path','6229272OphhDW','https://api.github.com/repos/','GitHub\x20API\x20request\x20failed\x20with\x20status\x20','stargazers_count','24BkOVmY','\x0a\x0a*DESCRIPTION:*\x0a>\x20','2564716fJIWnP','5385522xWNvFK','1022445kkDsIT','98133zKQeyk','node-fetch','repo','*BOT\x20NAME:*\x0a>\x20','No\x20description','readFileSync','\x0a\x0a*FORKS:*\x0a>\x20','error','120363387497418815@newsletter','Sorry,\x20something\x20went\x20wrong\x20while\x20fetching\x20the\x20repository\x20information.\x20Please\x20try\x20again\x20later.','6MUwZWZ','sendMessage','description','10awuXfj','forks_count','339902cMIoTh','5keUUaS','\x0a\x0a*STARS:*\x0a>\x20','html_url','Error\x20in\x20repo\x20command:','11dkxkae','name','match','../config','\x0a\x0a*OWNER\x20NAME:*\x0a>\x20','join','json','login','DML','info','sender','../assets/menu.m4a','4137795BuhKiu','\x0a\x0a*GITHUB\x20LINK:*\x0a>\x20','\x0a\x0a*Don\x27t\x20Forget\x20To\x20Star\x20and\x20Fork\x20Repository*\x0a\x0a>\x20*©\x20Powered\x20By\x20DML\x20🖤*'];_0x3586=function(){return _0x54cf88;};return _0x3586();}
+const fetch = require('node-fetch');
+const config = require('../config');
+const { cmd } = require('../command');
+
+cmd({
+    pattern: "repo",
+    alias: ["sc", "script", "info"],
+    desc: "Fetch GitHub repository information with random images and quotes.",
+    react: "📂",
+    category: "info",
+    filename: __filename,
+},
+async (conn, mek, m, { from, reply }) => {
+    const githubRepoURL = 'https://github.com/MLILA17/DML-MD';
+
+    // Array of additional random image URLs
+    const randomImageUrls = [
+        "https://files.catbox.moe/ca6put.mp3", // Example random image 1
+        "https://files.catbox.moe/dc8lcl.jpg", // **Replace with actual URL**
+        "https://files.catbox.moe/v5we38.jpg", // **Replace with actual URL**
+        "https://files.catbox.moe/dc8lcl.jpg", // **Replace with actual URL**
+        "https://files.catbox.moe/v5we38.jpg"  // **Replace with actual URL**
+    ];
+
+    // Array of random quotes
+    const quotes = [
+        "✨The best way to predict the future is to create it✨. - Dml-md",
+        "🌐Success is not final, failure is not fatal: it is the courage to continue that counts🎁. - MaryTo",
+        "🍁The only way to do great work is to love what you do📶. - Dml",
+        "📶Innovation distinguishes between a leader and a followe🎧r. - Dml-tech",
+        "🎵Life is what happens when you're busy making other plans🌌. - Edu-mastory"
+    ];
+
+    // Helper function to get a random element from an array
+    const getRandomElement = (arr) => arr[Math.floor(Math.random() * arr.length)];
+
+    try {
+        const [, username, repoName] = githubRepoURL.match(/github\.com\/([^/]+)\/([^/]+)/);
+        const response = await fetch(`https://api.github.com/repos/${username}/${repoName}`);
+        
+        if (!response.ok) throw new Error(`GitHub API error: ${response.status}`);
+        const repoData = await response.json();
+
+        const selectedRandomImageUrl = getRandomElement(randomImageUrls);
+        const selectedQuote = getRandomElement(quotes);
+
+        // Function to format date nicely
+        const formatDate = (dateString) => {
+            return new Date(dateString).toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+        };
+
+        // Format 1: Classic Box
+        const style1 = `╭───『 ${config.BOT_NAME} REPO 』───⳹
+│
+│ 📦 *Repository*: ${repoData.name}
+│ 👑 *Owner*: ${repoData.owner.login}
+│ ⭐ *Stars*: ${repoData.stargazers_count}
+│ ⑂ *Forks*: ${repoData.forks_count}
+│ 🔗 *URL*: ${repoData.html_url}
+│
+│ 📝 *Description*:
+│ ${repoData.description || 'No description'}
+│
+│ 💬 _"${selectedQuote}"_
+╰────────────────⳹
+> ${config.DESCRIPTION}`;
+
+        // Format 2: Minimalist
+        const style2 = `•——[ GITHUB INFO ]——•
+  │
+  ├─ 🏷️ ${repoData.name}
+  ├─ 👤 ${repoData.owner.login}
+  ├─ ✨ ${repoData.stargazers_count} Stars
+  ├─ ⑂ ${repoData.forks_count} Forks
+  │
+  ├─ 💬 _"${selectedQuote}"_
+  •——[ ${config.BOT_NAME} ]——•
+  > ${config.DESCRIPTION}`;
+
+        // Format 3: Fancy Borders
+        const style3 = `▄▀▄▀▄ DML REPOSITORY INFO ▄▀▄▀▄
+
+  ♢ *Project*: ${repoData.name}
+  ♢ *Author*: ${repoData.owner.login}
+  ♢ *Stars*: ${repoData.stargazers_count} ✨
+  ♢ *Forks*: ${repoData.forks_count} ⑂
+  ♢ *Updated*: ${formatDate(repoData.updated_at)}
+  
+  🔗 ${repoData.html_url}
+  
+  💬 _"${selectedQuote}"_
+  
+  > ${config.DESCRIPTION}`;
+
+        // Format 4: Code Style
+        const style4 = `┌──────────────────────┐
+│  ⚡ ${config.BOT_NAME} REPO  ⚡  │
+├──────────────────────┤
+│ • Name: ${repoData.name}
+│ • Owner: ${repoData.owner.login}
+│ • Stars: ${repoData.stargazers_count}
+│ • Forks: ${repoData.forks_count}
+│ • URL: ${repoData.html_url}
+│ • Desc: ${repoData.description || 'None'}
+│ • Quote: "${selectedQuote}"
+└──────────────────────┘
+> ${config.DESCRIPTION}`;
+
+        // Format 5: Modern Blocks
+        const style5 = `▰▰▰▰▰ DML REPO INFO ▰▰▰▰▰
+
+  🏷️  *${repoData.name}*
+  👨‍💻  ${repoData.owner.login}
+  
+  ⭐ ${repoData.stargazers_count}  ⑂ ${repoData.forks_count}
+  🔗 ${repoData.html_url}
+  
+  📜 ${repoData.description || 'No description'}
+  
+  💬 _"${selectedQuote}"_
+  
+  > ${config.DESCRIPTION}`;
+
+        // Format 6: Retro Terminal
+        const style6 = `╔══════════════════════╗
+║   ${config.BOT_NAME} REPO    ║
+╠══════════════════════╣
+║ > NAME: ${repoData.name}
+║ > OWNER: ${repoData.owner.login}
+║ > STARS: ${repoData.stargazers_count}
+║ > FORKS: ${repoData.forks_count}
+║ > URL: ${repoData.html_url}
+║ > DESC: ${repoData.description || 'None'}
+║ > QUOTE: "${selectedQuote}"
+╚══════════════════════╝
+> ${config.DESCRIPTION}`;
+
+        // Format 7: Elegant
+        const style7 = `┌───────────────┐
+│  📂  REPO  │
+└───────────────┘
+│
+│ *Project*: ${repoData.name}
+│ *Author*: ${repoData.owner.login}
+│
+│ ✨ ${repoData.stargazers_count} Stars
+│ ⑂ ${repoData.forks_count} Forks
+│
+│ 🔗 ${repoData.html_url}
+│
+┌───────────────┐
+│  📝  DESC  │
+└───────────────┘
+${repoData.description || 'No description'}
+
+💬 _"${selectedQuote}"_
+
+> ${config.DESCRIPTION}`;
+
+        // Format 8: Social Media Style
+        const style8 = `✦ ${config.BOT_NAME} Repository ✦
+
+📌 *${repoData.name}*
+👤 @${repoData.owner.login}
+
+⭐ ${repoData.stargazers_count} Stars | ⑂ ${repoData.forks_count} Forks
+🔄 Last updated: ${formatDate(repoData.updated_at)}
+
+🔗 GitHub: ${repoData.html_url}
+
+${repoData.description || 'No description available'}
+
+💬 _"${selectedQuote}"_
+
+> ${config.DESCRIPTION}`;
+
+        // Format 9: Fancy List
+        const style9 = `╔♫═🎧═♫══════════╗
+   ${config.BOT_NAME} REPO
+╚♫═🎧═♫══════════╝
+
+•・゜゜・* ✧  *・゜゜・•
+ ✧ *Name*: ${repoData.name}
+ ✧ *Owner*: ${repoData.owner.login}
+ ✧ *Stars*: ${repoData.stargazers_count}
+ ✧ *Forks*: ${repoData.forks_count}
+•・゜゜・* ✧  *・゜゜・•
+
+🔗 ${repoData.html_url}
+
+${repoData.description || 'No description'}
+
+💬 _"${selectedQuote}"_
+
+> ${config.DESCRIPTION}`;
+
+        // Format 10: Professional
+        const style10 = `┏━━━━━━━━━━━━━━━━━━┓
+┃  REPOSITORY REPORT  ┃
+┗━━━━━━━━━━━━━━━━━━┛
+
+◈ Project: ${repoData.name}
+◈ Maintainer: ${repoData.owner.login}
+◈ Popularity: ★ ${repoData.stargazers_count} | ⑂ ${repoData.forks_count}
+◈ Last Update: ${formatDate(repoData.updated_at)}
+◈ URL: ${repoData.html_url}
+
+Description:
+${repoData.description || 'No description provided'}
+
+Insight: _"${selectedQuote}"_
+
+> ${config.DESCRIPTION}`;
+
+        const styles = [style1, style2, style3, style4, style5, style6, style7, style8, style9, style10];
+        const selectedStyle = getRandomElement(styles);
+
+        // Send a random image (either the main MENU_IMAGE_URL or one from randomImageUrls)
+        const finalImageUrl = config.MENU_IMAGE_URL || selectedRandomImageUrl;
+        
+        await conn.sendMessage(from, {
+            image: { url: finalImageUrl },
+            caption: selectedStyle,
+            contextInfo: { 
+                mentionedJid: [m.sender],
+                forwardingScore: 999,
+                isForwarded: true,
+                forwardedNewsletterMessageInfo: {
+                    newsletterJid: '120363387497418815@newsletter',
+                    newsletterName: config.OWNER_NAME || 'DML',
+                    serverMessageId: 143
+                }
+            }
+        }, { quoted: mek });
+
+        // Send audio
+        await conn.sendMessage(from, {
+            audio: { url: 'https://files.catbox.moe/ca6put.mp3' },
+            mimetype: 'audio/mp4',
+            ptt: true,
+            contextInfo: { 
+                mentionedJid: [m.sender],
+                forwardingScore: 999,
+                isForwarded: true
+            }
+        }, { quoted: mek });
+
+    } catch (error) {
+        console.error("Repo command error:", error);
+        reply(`❌ Error: ${error.message}`);
+    }
+});
