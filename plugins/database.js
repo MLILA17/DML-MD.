@@ -121,7 +121,7 @@ async (conn, mek, m, { from, args, isOwner, reply }) => {
     // Check the argument for enabling or disabling the anticall feature
     if (args[0] === "on") {
         config.AUTO_TYPING = "true";
-        return reply("*_FAKETYPING  IS NOW ENABLED._*☑️");
+        return reply("*_FAKETYPING  IS NOW ENABLED._*✅");
     } else if (args[0] === "off") {
         config.AUTO_TYPING = "false";
         return reply("*_FAKETYPING FEATURE IS NOW DISABLED._*❌");
@@ -148,7 +148,7 @@ async (conn, mek, m, { from, args, isOwner, reply }) => {
     // Check the argument for enabling or disabling the anticall feature
     if (args[0] === "on") {
         config.ALWAYS_ONLINE = "true";
-        return reply("*_ALWAYSONLINE  IS NOW ENABLED._*☑️");
+        return reply("*_ALWAYSONLINE  IS NOW ENABLED._*✅");
     } else if (args[0] === "off") {
         config.ALWAYS_ONLINE = "false";
         return reply("*_ALWAYSONLINE FEATURE IS NOW DISABLED._*❌");
@@ -172,7 +172,7 @@ async (conn, mek, m, { from, args, isOwner, reply }) => {
     // Check the argument for enabling or disabling the anticall feature
     if (args[0] === "on") {
         config.AUTO_RECORDING = "true";
-        return reply("*_FAKEREACORDING IS NOW ENABLED._*☑️");
+        return reply("*_FAKEREACORDING IS NOW ENABLED._*✅");
     } else if (args[0] === "off") {
         config.AUTO_RECORDING = "false";
         return reply("*_FAKEREACORDING FEATURE IS NOW DISABLED._*❌");
@@ -197,7 +197,7 @@ async (conn, mek, m, { from, args, isOwner, reply }) => {
     // Default value for AUTO_VIEW_STATUS is "false"
     if (args[0] === "on") {
         config.AUTO_STATUS_SEEN = "true";
-        return reply("*_AUTOREADSTATUS IS NOW ENABLED._*☑️");
+        return reply("*_AUTOREADSTATUS IS NOW ENABLED._*✅");
     } else if (args[0] === "off") {
         config.AUTO_STATUS_SEEN = "false";
         return reply("*_AUTOREADSTATUS IS NOW DISABLED._*❌");
@@ -222,7 +222,7 @@ async (conn, mek, m, { from, args, isOwner, reply }) => {
     // Default value for AUTO_STATUS_REACT is "false"
     if (args[0] === "on") {
         config.AUTO_STATUS_REACT = "true";
-        return reply("*_AUTOLIKESTATUS IS NOW ENABLED._*☑️");
+        return reply("*_AUTOLIKESTATUS IS NOW ENABLED._*✅");
     } else if (args[0] === "off") {
         config.AUTO_STATUS_REACT = "false";
         return reply("*_AUTOLIKESTATUS IS NOW DISABLED._*❌");
@@ -248,7 +248,7 @@ async (conn, mek, m, { from, args, isOwner, reply }) => {
     // Check the argument for enabling or disabling the anticall feature
     if (args[0] === "on") {
         config.READ_MESSAGE = "true";
-        return reply("*_READ MESSAGE FEATURE IS NOW ENABLED._*☑️");
+        return reply("*_READ MESSAGE FEATURE IS NOW ENABLED._*✅");
     } else if (args[0] === "off") {
         config.READ_MESSAGE = "false";
         return reply("*_READ MESSAGE FEATURE IS NOW DISABLED._*❌");
@@ -273,7 +273,7 @@ async (conn, mek, m, { from, args, isOwner, reply }) => {
     // Check the argument for enabling or disabling the anticall feature
     if (args[0] === "on") {
         config.ANTI_BAD = "true";
-        return reply("*_ANTI BAD WORD IS NOW ENABLED._*☑️");
+        return reply("*_ANTI BAD WORD IS NOW ENABLED._*✅");
     } else if (args[0] === "off") {
         config.ANTI_BAD = "false";
         return reply("*_ANTI BAD WORD FEATURE IS NOW DISABLED._*❌");
@@ -298,7 +298,7 @@ async (conn, mek, m, { from, args, isOwner, reply }) => {
     // Check the argument for enabling or disabling the anticall feature
     if (args[0] === "on") {
         config.AUTO_STICKER = "true";
-        return reply("*_AUTO-STICKER FEATURE IS NOW ENABLED._*☑️");
+        return reply("*_AUTO-STICKER FEATURE IS NOW ENABLED._*✅");
     } else if (args[0] === "off") {
         config.AUTO_STICKER = "false";
         return reply("*_AUTO-STICKER FEATURE IS NOW DISABLED._*❌");
@@ -323,7 +323,7 @@ async (conn, mek, m, { from, args, isOwner, reply }) => {
     // Check the argument for enabling or disabling the anticall feature
     if (args[0] === "on") {
         config.AUTO_REPLY = "true";
-        return reply("*_AUTO-REPLY  IS NOW ENABLED._*☑️");
+        return reply("*_AUTO-REPLY  IS NOW ENABLED._*✅");
     } else if (args[0] === "off") {
         config.AUTO_REPLY = "false";
         return reply("*_AUTO-REPLY FEATURE IS NOW DISABLED._*❌");
@@ -349,7 +349,7 @@ async (conn, mek, m, { from, args, isOwner, reply }) => {
     // Check the argument for enabling or disabling the anticall feature
     if (args[0] === "on") {
         config.AUTO_VOICE = "true";
-        return reply("*_AUTO-VOICE  IS NOW ENABLED._*☑️");
+        return reply("*_AUTO-VOICE  IS NOW ENABLED._*✅");
     } else if (args[0] === "off") {
         config.AUTO_VOICE = "false";
         return reply("*_AUTO-VOICE FEATURE IS NOW DISABLED._*❌");
@@ -375,7 +375,7 @@ async (conn, mek, m, { from, args, isOwner, reply }) => {
     // Check the argument for enabling or disabling the anticall feature
     if (args[0] === "on") {
         config.AUTO_REACT = "true";
-        await reply("*_AUTOREACT FEATURE IS NOW ENABLED._*☑️");
+        await reply("*_AUTOREACT FEATURE IS NOW ENABLED._*✅");
     } else if (args[0] === "off") {
         config.AUTO_REACT = "false";
         await reply("*_AUTOREACT FEATURE IS NOW DISABLED._*❌");
@@ -400,7 +400,7 @@ async (conn, mek, m, { from, args, isOwner, reply }) => {
     // Check the argument for enabling or disabling the anticall feature
     if (args[0] === "on") {
         config.CUSTOM_REACT = "true";
-        await reply("*_HEARTREACT FEATURE IS NOW ENABLED._*☑️");
+        await reply("*_HEARTREACT FEATURE IS NOW ENABLED._*✅");
     } else if (args[0] === "off") {
         config.CUSTOM_REACT = "false";
         await reply("*_HEARTREACT FEATURE IS NOW DISABLED._*❌");
@@ -425,7 +425,7 @@ async (conn, mek, m, { from, args, isOwner, reply }) => {
     // Check the argument for enabling or disabling the anticall feature
     if (args[0] === "on") {
         config.ANTI_LINK = "true";
-        await reply("*_OWNERREACT FEATURE IS NOW ENABLED._*☑️");
+        await reply("*_OWNERREACT FEATURE IS NOW ENABLED._*✅");
     } else if (args[0] === "off") {
         config.ANTI_LINK = "false";
         await reply("*_ANTI_LINK FEATURE IS NOW DISABLED._*❌");
@@ -450,7 +450,7 @@ async (conn, mek, m, { from, args, isOwner, reply }) => {
     // Check the argument for enabling or disabling the anticall feature
     if (args[0] === "on") {
         config.AUTO_STATUS_REPLY = "true";
-        return reply("*_STATUS-REPLY FEATURE IS NOW ENABLED._*☑️");
+        return reply("*_STATUS-REPLY FEATURE IS NOW ENABLED._*✅");
     } else if (args[0] === "off") {
         config.AUTO_STATUS_REPLY = "false";
         return reply("*_STATUS-REPLY FEATURE IS NOW DISABLED._*❌");
