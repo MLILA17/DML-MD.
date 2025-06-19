@@ -1,141 +1,104 @@
+import axios from 'axios';
+import pkg, { prepareWAMessageMedia } from '@whiskeysockets/baileys';
+const { generateWAMessageFromContent, proto } = pkg;
+import config from '../config.cjs';
 
+const Lyrics = async (m, Matrix) => {
+  const prefix = config.PREFIX;
+const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(' ')[0].toLowerCase() : '';
+const text = m.body.slice(prefix.length + cmd.length).trim();
 
+  const validCommands = ['lyrics', 'lyric'];
 
+  if (validCommands.includes(cmd)) {
+    if (!text) return m.reply(`Hello *_${m.pushName}_,*\n Here's Example Usage: _.lyrics Spectre|Alan Walker._`);
 
-
-const axios = require('axios');
-const { cmd } = require('../command');
-
-/*
-cmd({
-    pattern: "lyrics",
-    alias: ["lyric"],
-    desc: "Get the lyrics of a song by artist and title.",
-    react: "🎵",
-    category: "utility",
-    use: ".lyrics <artist> <song title>",
-    filename: __filename,
-}, async (conn, mek, m, { args, reply }) => {
     try {
-        if (args.length < 2) {
-            return reply("❌ Please provide the artist and song title.\nExample: `.lyrics Ed Sheeran - Shape of You`");
-        }
+      await m.React('🕘');
+      await m.reply('A moment, *DML-MD* is generating your lyrics request...');
 
-        // Parsing input using delimiter
-        let artist, title;
-        if (args.includes('-')) {
-            const delimiterIndex = args.indexOf('-');
-            artist = args.slice(0, delimiterIndex).join(' ').trim();
-            title = args.slice(delimiterIndex + 1).join(' ').trim();
-        } else if (args[0].startsWith('"') && args[args.length - 1].endsWith('"')) {
-            artist = args.slice(0, -1).join(' ').replace(/"/g, '').trim();
-            title = args.slice(-1).join(' ');
-        } else {
-            artist = args[0];
-            title = args.slice(1).join(' ');
-        }
+      if (!text.includes('|')) {
+        return m.reply('Please provide the song name and artist name separated by a "|", for example: Spectre|Alan Walker.');
+      }
 
-        if (!artist || !title) {
-            return reply("❌ Please specify both the artist and the song title.\nExample: `.lyrics \"Joe Dwé Filé\" Shape of You`");
-        }
+      const [title, artist] = text.split('|').map(part => part.trim());
 
-        // Notify the user that the lyrics are being fetched
-        reply(`🎵 Searching for lyrics of "${title}" BY ${artist}...`);
+      if (!title || !artist) {
+        return m.reply('Both song name and artist name are required. Please provide them in the format: song name|artist name.');
+      }
 
-        // Fetch lyrics using an API
-        const response = await axios.get(`https://api.lyrics.ovh/v1/${artist}/${title}`);
-        const lyrics = response.data.lyrics;
+      const apiUrl = `https://api.lyrics.ovh/v1/${encodeURIComponent(artist)}/${encodeURIComponent(title)}`;
+      const response = await axios.get(apiUrl);
+      const result = response.data;
 
-        if (!lyrics) {
-            return reply(`❌ Sorry, no lyrics found for "${title}" by ${artist}.`);
-        }
+      if (result && result.lyrics) {
+        const lyrics = result.lyrics;
 
-        // Send the lyrics back to the chat
-        reply(`> 🍓DML LYRICS RESULT🍓\n\nTitle🎧 *${title}*\nArtist🗣️ *${artist}*\n\n${lyrics}`);
-    } catch (error) {
-        console.error("Error fetching lyrics:", error.message);
-
-        if (error.response && error.response.status === 404) {
-            reply("❌ Sorry, no lyrics found for the specified artist and song title.");
-        } else {
-            reply("❌ An error occurred while fetching the lyrics. Please try again later.");
-        }
-    }
-});
-*/
-
-cmd({
-    pattern: "lyrics",
-    alias: ["lyric"],
-    desc: "Get the lyrics of a song by artist and title.",
-    react: "🎵",
-    category: "utility",
-    use: ".lyrics <artist> <song title>",
-    filename: __filename,
-}, async (conn, mek, m, { args, reply, buttonsMessage }) => {
-    try {
-        if (args.length < 2) {
-            return reply("❌ Please provide the artist and song title.\nExample: `.lyrics Ed Sheeran - Shape of You`");
-        }
-
-        // Parsing input using delimiter
-        let artist, title;
-        if (args.includes('-')) {
-            const delimiterIndex = args.indexOf('-');
-            artist = args.slice(0, delimiterIndex).join(' ').trim();
-            title = args.slice(delimiterIndex + 1).join(' ').trim();
-        } else if (args[0].startsWith('"') && args[args.length - 1].endsWith('"')) {
-            artist = args.slice(0, -1).join(' ').replace(/"/g, '').trim();
-            title = args.slice(-1).join(' ');
-        } else {
-            artist = args[0];
-            title = args.slice(1).join(' ');
-        }
-
-        if (!artist || !title) {
-            return reply("❌ Please specify both the artist and the song title.\nExample: `.lyrics \"Joe Dwé Filé\" Shape of You`");
-        }
-
-        // Notify the user that the lyrics are being fetched
-        reply(`🎵 Searching for lyrics of "${title}" by ${artist}...`);
-
-        // Fetch lyrics using an API
-        const response = await axios.get(`https://api.lyrics.ovh/v1/${encodeURIComponent(artist)}/${encodeURIComponent(title)}`);
-        const lyrics = response.data.lyrics;
-
-        if (!lyrics) {
-            return reply(`❌ Sorry, no lyrics found for "${title}" by ${artist}.`);
-        }
-
-        // Create buttons
-        const buttons = [
-            { buttonId: 'copy_lyrics', buttonText: { displayText: 'Copy' }, type: 1 }
+        let buttons = [{
+            name: "cta_copy",
+            buttonParamsJson: JSON.stringify({
+              display_text: "📋 ᴄᴏᴘʏ ʟʏʀɪᴄs",
+              id: "copy_code",
+              copy_code: lyrics
+            })
+          },
+          {
+            name: "cta_url",
+            buttonParamsJson: JSON.stringify({
+              display_text: "💜 FOLLOW ME ON",
+              url: `https://whatsapp.com/channel/0029Vb2hoPpDZ4Lb3mSkVI3C`
+            })
+          },
+          {
+            name: "quick_reply",
+            buttonParamsJson: JSON.stringify({
+              display_text: "DML-MD",
+              id: ".menu"
+            })
+          }
         ];
 
-        // Send message with lyrics and buttons
-        const buttonMessage = {
-            text: `> 🍓DML LYRICS RESULT🍓\n\nTitle🎧 *${title}*\nArtist🗣️ *${artist}*\n\n${lyrics}`,
-            footer: 'Lyrics provided by lyrics.ovh',
-            buttons: buttons,
-            headerType: 1
-        };
-
-        await conn.sendMessage(from, buttonMessage, { quoted: mek });
-
-        // Handle button response
-        conn.on('button_response', async (buttonResponse) => {
-            if (buttonResponse.buttonId === 'copy_lyrics') {
-                await conn.sendMessage(from, { text: '📋 Lyrics copied to clipboard!' }, { quoted: mek });
+        let msg = generateWAMessageFromContent(m.from, {
+          viewOnceMessage: {
+            message: {
+              messageContextInfo: {
+                deviceListMetadata: {},
+                deviceListMetadataVersion: 2
+              },
+              interactiveMessage: proto.Message.InteractiveMessage.create({
+                body: proto.Message.InteractiveMessage.Body.create({
+                  text: lyrics
+                }),
+                footer: proto.Message.InteractiveMessage.Footer.create({
+                  text: "> *© POWERED BY DML-MD*"
+                }),
+                header: proto.Message.InteractiveMessage.Header.create({
+                  title: "",
+                  subtitle: "",
+                  hasMediaAttachment: false
+                }),
+                nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
+                  buttons: buttons
+                })
+              })
             }
+          }
+        }, {});
+
+        await Matrix.relayMessage(msg.key.remoteJid, msg.message, {
+          messageId: msg.key.id
         });
 
+        await m.React('✅');
+      } else {
+        throw new Error('Invalid response from the Lyrics API.');
+      }
     } catch (error) {
-        console.error("Error fetching lyrics:", error.message);
-
-        if (error.response && error.response.status === 404) {
-            reply("❌ Sorry, no lyrics found for the specified artist and song title.");
-        } else {
-            reply("❌ An error occurred while fetching the lyrics. Please try again later.");
-        }
+      console.error('Error getting lyrics:', error.message);
+      m.reply('Error getting lyrics.');
+      await m.React('❌');
     }
-});
+  }
+};
+
+export default Lyrics;
