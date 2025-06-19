@@ -1,1 +1,85 @@
-function _0x262b(){const _0x293759=['DML-MD','10215oVWDiJ','ms\x20','An\x20error\x20occurred:\x20','*PINGING...*','9asjNMS','.ping','floor','main','738282hETkHc','*🔥\x20DML-MD\x20SPEED\x20:\x20','Check\x20bot\x27s\x20response\x20time.','ping2','>\x20*DML-MD-SPEED:\x20','getTime','348504WTkNGN','../command','pong','5742050zHsrZP','length','33675mCRApP','324CwpuBU','ping','../config','now','120363387497418815@newsletter','sendMessage','random','914193ylkOSi','🛡️','170310fJFOOQ','key','4kpBhaP'];_0x262b=function(){return _0x293759;};return _0x262b();}function _0x1f95(_0x375612,_0x59aef7){const _0x262b3b=_0x262b();return _0x1f95=function(_0x1f959c,_0x1dab3b){_0x1f959c=_0x1f959c-0x185;let _0x515e8a=_0x262b3b[_0x1f959c];return _0x515e8a;},_0x1f95(_0x375612,_0x59aef7);}const _0x494b55=_0x1f95;(function(_0x56e710,_0x53815d){const _0x436b7f=_0x1f95,_0x41bdab=_0x56e710();while(!![]){try{const _0x379367=parseInt(_0x436b7f(0x1a3))/0x1+-parseInt(_0x436b7f(0x18e))/0x2*(parseInt(_0x436b7f(0x18c))/0x3)+parseInt(_0x436b7f(0x1a4))/0x4*(-parseInt(_0x436b7f(0x190))/0x5)+-parseInt(_0x436b7f(0x198))/0x6+-parseInt(_0x436b7f(0x18a))/0x7+-parseInt(_0x436b7f(0x19e))/0x8*(-parseInt(_0x436b7f(0x194))/0x9)+parseInt(_0x436b7f(0x1a1))/0xa;if(_0x379367===_0x53815d)break;else _0x41bdab['push'](_0x41bdab['shift']());}catch(_0x11de35){_0x41bdab['push'](_0x41bdab['shift']());}}}(_0x262b,0x1cff6));const config=require(_0x494b55(0x185)),{cmd,commands}=require(_0x494b55(0x19f));cmd({'pattern':_0x494b55(0x1a5),'alias':['speed',_0x494b55(0x1a0)],'use':_0x494b55(0x195),'desc':_0x494b55(0x19a),'category':'main','react':'⚡','filename':__filename},async(_0x34e877,_0x3737d9,_0x3add24,{from:_0x3b9c1a,quoted:_0x4f445c,sender:_0x38f8c8,reply:_0x55f21e})=>{const _0x37070f=_0x494b55;try{const _0x1206da=new Date()[_0x37070f(0x19d)](),_0x2fec51=['🔥','⚡','🚀','💨','🎯','🎉','🌟','💥','🕐','🔹'],_0xda913c=['💎','🏆','⚡️','🚀','🎶','🌠','🌀','🔱',_0x37070f(0x18b),'✨'],_0x5024ce=_0x2fec51[Math[_0x37070f(0x196)](Math[_0x37070f(0x189)]()*_0x2fec51[_0x37070f(0x1a2)])];let _0x56a51a=_0xda913c[Math['floor'](Math[_0x37070f(0x189)]()*_0xda913c['length'])];while(_0x56a51a===_0x5024ce){_0x56a51a=_0xda913c[Math[_0x37070f(0x196)](Math[_0x37070f(0x189)]()*_0xda913c[_0x37070f(0x1a2)])];}await _0x34e877[_0x37070f(0x188)](_0x3b9c1a,{'react':{'text':_0x56a51a,'key':_0x3737d9[_0x37070f(0x18d)]}});const _0x4a02ab=new Date()[_0x37070f(0x19d)](),_0x4106dd=(_0x4a02ab-_0x1206da)/0x3e8,_0x3dfcdd=_0x37070f(0x19c)+_0x4106dd['toFixed'](0x2)+_0x37070f(0x191)+_0x5024ce+'*';await _0x34e877[_0x37070f(0x188)](_0x3b9c1a,{'text':_0x3dfcdd,'contextInfo':{'mentionedJid':[_0x38f8c8],'forwardingScore':0x3e7,'isForwarded':!![],'forwardedNewsletterMessageInfo':{'newsletterJid':_0x37070f(0x187),'newsletterName':_0x37070f(0x18f),'serverMessageId':0x8f}}},{'quoted':_0x3737d9});}catch(_0x2c9cbb){console['error']('Error\x20in\x20ping\x20command:',_0x2c9cbb),_0x55f21e(_0x37070f(0x192)+_0x2c9cbb['message']);}}),cmd({'pattern':_0x494b55(0x19b),'desc':_0x494b55(0x19a),'category':_0x494b55(0x197),'react':'🍂','filename':__filename},async(_0x347073,_0x357f4f,_0x3018f8,{from:_0x5876b6,quoted:_0x56747f,body:_0x55a91c,isCmd:_0x2ca782,command:_0x2bef68,args:_0x318464,q:_0xbcf8,isGroup:_0x131eac,sender:_0x4b4d29,senderNumber:_0xda842d,botNumber2:_0x5d3f22,botNumber:_0x45d48e,pushname:_0x1b6543,isMe:_0x283b3f,isOwner:_0x581308,groupMetadata:_0x22c44e,groupName:_0x216f8e,participants:_0x46738a,groupAdmins:_0x763aab,isBotAdmins:_0x52f8fd,isAdmins:_0x2006a6,reply:_0x4d30d0})=>{const _0x18e66e=_0x494b55;try{const _0x14b8b9=Date[_0x18e66e(0x186)](),_0x44e482=await _0x347073[_0x18e66e(0x188)](_0x5876b6,{'text':_0x18e66e(0x193)}),_0x4633dd=Date[_0x18e66e(0x186)](),_0x1432f1=_0x4633dd-_0x14b8b9;await _0x347073['sendMessage'](_0x5876b6,{'text':_0x18e66e(0x199)+_0x1432f1+'ms*'},{'quoted':_0x44e482});}catch(_0x5869d7){console['log'](_0x5869d7),_0x4d30d0(''+_0x5869d7);}});
+const config = require('../config');
+const { cmd, commands } = require('../command');
+
+cmd({
+    pattern: "ping",
+    alias: ["speed", "pong"],
+    use: '.ping',
+    desc: "Check bot's response time.",
+    category: "main",
+    react: "⚡",
+    filename: __filename
+},
+async (conn, mek, m, { from, quoted, sender, reply }) => {
+    try {
+        const start = Date.now();
+         // Stylish Emojis
+        const reactionEmojis = ['⚡', '🚀', '🔥', '💨', '🌟'];
+        const statusEmojis = ['✅', '🟢', '✨', '📶', '🔋'];
+        
+        // Array of dynamic, fancy text messages
+        const fancyTexts = [
+            "“✨Stay foolish to stay sane.✨”",
+            "“🟢The only way to do great work is to love what you do.🎀”",
+            "“❤️Simplicity is the ultimate sophistication.💞”",
+            "“🤔Your time is limited, so don’t waste it living someone else’s life.🥹”",
+            "“✅Innovation distinguishes between a leader and a follower📊.”",
+            "“📆Strive for greatness.🟢”"
+        ];
+        const randomFancyText = fancyTexts[Math.floor(Math.random() * fancyTexts.length)];
+
+        // Initial "checking" message
+        await conn.sendMessage(from, {
+            text: '*〘⏳ Checking bot speed... 〙*'
+        });
+
+        const end = Date.now();
+        const speed = end - start;
+
+        // Determine the bot's status based on speed
+        let status = "Stable";
+        if (speed > 1000) status = "Faster🚀";
+        else if (speed > 500) status = "Moderate";
+
+        // Fetch the user's profile picture
+        let profilePicUrl;
+        try {
+            profilePicUrl = await conn.profilePictureUrl(sender, 'image');
+        } catch {
+            // Provide a default fallback image if the user has no profile picture
+            profilePicUrl = 'https://files.catbox.moe/v5we38.jpg';
+        }
+        
+        // Construct the stylish caption text
+        const stylishText = `
+╭─❏ *『 DML-MD BOT PING STATUS 』*
+│
+├─🤖 *Bot Name:* ${config.botname || 'DML-MD'}
+├─⚡ *Speed:* ${statusEmojis[Math.floor(Math.random() * statusEmojis.length)]} ${speed}ms
+├─📶 *Status:* ${statusEmojis[Math.floor(Math.random() * statusEmojis.length)]} ${status}
+├─⏱️ *Checked At:* ${new Date().toLocaleTimeString()}
+│
+╰─❏ *${randomFancyText}!*
+        `.trim();
+
+        // Send the profile picture with the caption
+        await conn.sendMessage(from, {
+            image: { url: profilePicUrl },
+            caption: stylishText,
+            contextInfo: {
+                mentionedJid: [sender],
+                forwardingScore: 999,
+                isForwarded: true,
+                forwardedNewsletterMessageInfo: {
+                    newsletterJid: '120363387497418815@newsletter',
+                    newsletterName: "DML-MD",
+                    serverMessageId: 143
+                }
+            }
+        }, { quoted: mek });
+
+    } catch (e) {
+        console.error("Error in ping command:", e);
+        reply(`An error occurred: ${e.message}`);
+    }
+});
