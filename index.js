@@ -135,10 +135,12 @@ conn.ev.on('connection.update', (update) => {
 ├─ 🌟 *Star the Repo:*  
 │    https://github.com/MLILA17/DML-MD  
 ╰─🚀 *Powered by Dml*`;
-    conn.sendMessage(conn.user.id, { image: { url: `https://files.catbox.moe/vcdwmp.jpg` }, caption: up })
-  }
-  })
-  conn.ev.on('creds.update', saveCreds)
+    conn.sendMessage(conn.user.id, { 
+  image: { url: `https://files.catbox.moe/vcdwmp.jpg` }, 
+  caption: up 
+});
+
+conn.ev.on('creds.update', saveCreds);
 
   //==============================
 
