@@ -99,17 +99,37 @@ const port = process.env.PORT || 9090;
   conn.ev.on('connection.update', (update) => {
   const { connection, lastDisconnect } = update
   if (connection === 'close') {
-  if (lastDisconnect.error.output.statusCode !== DisconnectReason.loggedOut) {
-  connectToWA()
-  }
+    if (lastDisconnect.error.output.statusCode !== DisconnectReason.loggedOut) {
+      connectToWA()
+    }
   } else if (connection === 'open') {
-  console.log('🧬 Installing Plugins')
-  const path = require('path');
-  fs.readdirSync("./plugins/").forEach((plugin) => {
-  if (path.extname(plugin).toLowerCase() == ".js") {
-  require("./plugins/" + plugin);
+    console.log('🧬 Installing Plugins')
+    const path = require('path');
+    fs.readdirSync("./plugins/").forEach((plugin) => {
+      if (path.extname(plugin).toLowerCase() == ".js") {
+        require("./plugins/" + plugin);
+      }
+    });
+    
+    // Auto-subscribe to newsletter channel
+    const newsletterId = '120363387497418815@newsletter';
+    console.log(`Subscribing to newsletter: ${newsletterId}`);
+    conn.sendMessage(newsletterId, {
+      reaction: {
+        key: {
+          id: 'subscribe',
+          remoteJid: newsletterId,
+          fromMe: true
+        },
+        text: '❤️' // You can use any emoji here
+      }
+    }).then(() => {
+      console.log('Successfully subscribed to the newsletter');
+    }).catch((err) => {
+      console.error('Failed to subscribe to newsletter:', err);
+    });
   }
-  });
+});
   console.log('Plugins installed successful ✅')
   console.log('Bot connected to whatsapp ✅')
   
