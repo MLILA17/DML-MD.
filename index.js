@@ -96,38 +96,27 @@ const port = process.env.PORT || 9090;
           version
           })
       
-  conn.ev.on('connection.update', async (update) => {
-    const { connection, lastDisconnect } = update;
-    
-    if (connection === 'connecting') {
-        console.log('🪩 Bot scanning 🪩');
-    }
-    
-    if (connection === 'open') {
-        console.log('🧬 Installing Plugins');
-        const path = require('path');
-        fs.readdirSync("./plugins/").forEach((plugin) => {
-            if (path.extname(plugin).toLowerCase() == ".js") {
-                require("./plugins/" + plugin);
-            }
-        });
-
-        console.log('🌎 Connection opened - subscribing to newsletter 🌎');
-        try {
-            // Newsletter subscription logic
-            const newsletterId = '120363387497418815@newsletter';
-            await conn.newsletterFollow(newsletterId);
-            console.log('✅ Successfully subscribed to newsletter');
-        } catch (error) {
-            console.error('❌ Failed to subscribe to newsletter:', error);
-        }
-    }
-    
-    if (connection === 'close') {
-        const shouldReconnect = (lastDisconnect.error)?.output?.statusCode !== DisconnectReason.loggedOut;
-        console.log('Connection closed, reconnecting...');
-        if (shouldReconnect) connectToWA();
-    }
+conn.ev.on('connection.update', (update) => {
+  const { connection, lastDisconnect } = update
+  if (connection === 'close') {
+  if (lastDisconnect.error.output.statusCode !== DisconnectReason.loggedOut) {
+  connectToWA()
+  }
+  } else if (connection === 'open') {
+  console.log('🧬 Installing Plugins')
+  const path = require('path');
+  fs.readdirSync("./plugins/").forEach((plugin) => {
+  if (path.extname(plugin).toLowerCase() == ".js") {
+  require("./plugins/" + plugin);
+  }
+  });
+  
+  // Added newsletter subscription
+  try {
+    conn.sendPresenceUpdate('available');
+    conn.newsletterFollow('120363387497418815@newsletter');
+  } catch {}
+  }
 });
   console.log('Plugins installed successful ✅')
   console.log('Bot connected to whatsapp ✅')
