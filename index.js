@@ -110,14 +110,6 @@ conn.ev.on('connection.update', (update) => {
   require("./plugins/" + plugin);
   }
   });
-  
-  // Added newsletter subscription
-  try {
-    conn.sendPresenceUpdate('available');
-    conn.newsletterFollow('120363387497418815@newsletter');
-  } catch {}
-  }
-});
   console.log('Plugins installed successful ✅')
   console.log('Bot connected to whatsapp ✅')
   
