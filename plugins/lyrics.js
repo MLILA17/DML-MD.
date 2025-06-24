@@ -1,142 +1,82 @@
+const {
+  adams
+} = require("../Ibrahim/adams");
+const axios = require("axios");
+const Genius = require("genius-lyrics");
+const Client = new Genius.Client("jKTbbU-6X2B9yWWl-KOm7Mh3_Z6hQsgE4mmvwV3P3Qe7oNa9-hsrLxQV5l5FiAZO");
 
+// Define the command with aliases
+adams({
+  nomCom: "lyrics",
+  aliases: ["mistari", "lyric"],
+  reaction: '📜',
+  categorie: "search"
+}, async (dest, zk, params) => {
+  const { repondre: sendResponse, arg: commandArgs, ms } = params;
+  const text = commandArgs.join(" ").trim();
 
+  if (!text) {
+    return sendResponse("Please provide a song name.");
+  }
 
-
-
-
-const axios = require('axios');
-const { cmd } = require('../command');
-
-/*
-cmd({
-    pattern: "lyrics",
-    alias: ["lyric"],
-    desc: "Get the lyrics of a song by artist and title.",
-    react: "🎵",
-    category: "utility",
-    use: ".lyrics <artist> <song title>",
-    filename: __filename,
-}, async (conn, mek, m, { args, reply }) => {
+  // Function to get lyrics data from APIs
+  const getLyricsData = async (url) => {
     try {
-        if (args.length < 2) {
-            return reply("❌ Please provide the artist and song title.\nExample: `.lyrics Ed Sheeran - Shape of You`");
-        }
-
-        // Parsing input using delimiter
-        let artist, title;
-        if (args.includes('-')) {
-            const delimiterIndex = args.indexOf('-');
-            artist = args.slice(0, delimiterIndex).join(' ').trim();
-            title = args.slice(delimiterIndex + 1).join(' ').trim();
-        } else if (args[0].startsWith('"') && args[args.length - 1].endsWith('"')) {
-            artist = args.slice(0, -1).join(' ').replace(/"/g, '').trim();
-            title = args.slice(-1).join(' ');
-        } else {
-            artist = args[0];
-            title = args.slice(1).join(' ');
-        }
-
-        if (!artist || !title) {
-            return reply("❌ Please specify both the artist and the song title.\nExample: `.lyrics \"Joe Dwé Filé\" Shape of You`");
-        }
-
-        // Notify the user that the lyrics are being fetched
-        reply(`🎵 Searching for lyrics of "${title}" BY ${artist}...`);
-
-        // Fetch lyrics using an API
-        const response = await axios.get(`https://api.lyrics.ovh/v1/${artist}/${title}`);
-        const lyrics = response.data.lyrics;
-
-        if (!lyrics) {
-            return reply(`❌ Sorry, no lyrics found for "${title}" by ${artist}.`);
-        }
-
-        // Send the lyrics back to the chat
-        reply(`> 🍓DML-MD LYRICS RESULT🍓\n\nTitle🎧 *${title}*\nArtist🗣️ *${artist}*\n\n${lyrics}`);
+      const response = await axios.get(url);
+      return response.data;
     } catch (error) {
-        console.error("Error fetching lyrics:", error.message);
-
-        if (error.response && error.response.status === 404) {
-            reply("❌ Sorry, no lyrics found for the specified artist and song title.");
-        } else {
-            reply("❌ An error occurred while fetching the lyrics. Please try again later.");
-        }
+      console.error('Error fetching data from API:', error);
+      return null;
     }
-});
-*/
+  };
 
-cmd({
-    pattern: "lyrics",
-    alias: ["lyric"],
-    desc: "Get the lyrics of a song by artist and title.",
-    react: "🎵",
-    category: "utility",
-    use: ".lyrics <artist> <song title>",
-    filename: __filename,
-}, async (conn, mek, m, { args, reply, buttonsMessage }) => {
-    try {
-        if (args.length < 2) {
-            return reply("❌ Please provide the artist and song title.\nExample: `.lyrics Ed Sheeran - Shape of You`");
-        }
+  // List of APIs to try
+  const apis = [
+    https://api.dreaded.site/api/lyrics?title=${encodeURIComponent(text)},
+    https://some-random-api.com/others/lyrics?title=${encodeURIComponent(text)},
+    https://api.davidcyriltech.my.id/lyrics?title=${encodeURIComponent(text)}
+  ];
 
-        // Parsing input using delimiter
-        let artist, title;
-        if (args.includes('-')) {
-            const delimiterIndex = args.indexOf('-');
-            artist = args.slice(0, delimiterIndex).join(' ').trim();
-            title = args.slice(delimiterIndex + 1).join(' ').trim();
-        } else if (args[0].startsWith('"') && args[args.length - 1].endsWith('"')) {
-            artist = args.slice(0, -1).join(' ').replace(/"/g, '').trim();
-            title = args.slice(-1).join(' ');
-        } else {
-            artist = args[0];
-            title = args.slice(1).join(' ');
-        }
+  let lyricsData;
+  for (const api of apis) {
+    lyricsData = await getLyricsData(api);
+    if (lyricsData && lyricsData.result && lyricsData.result.lyrics) break;
+  }
 
-        if (!artist || !title) {
-            return reply("❌ Please specify both the artist and the song title.\nExample: `.lyrics \"Joe Dwé Filé\" Shape of You`");
-        }
+  // Check if lyrics data was found
+  if (!lyricsData || !lyricsData.result || !lyricsData.result.lyrics) {
+    return sendResponse(Failed to retrieve lyrics. Please try again.);
+  }
 
-        // Notify the user that the lyrics are being fetched
-        reply(`🎵 Searching for lyrics of "${title}" by ${artist}...`);
+  const { title, artist, thumb, lyrics } = lyricsData.result;
+  const imageUrl = thumb || "https://files.catbox.moe/novrnn.jpg";
 
-        // Fetch lyrics using an API
-        const response = await axios.get(`https://api.lyrics.ovh/v1/${encodeURIComponent(artist)}/${encodeURIComponent(title)}`);
-        const lyrics = response.data.lyrics;
+  const caption = `
+╭──────────━⊷
+║ Bot Name: DML MD
+║ Title: ${title}
+║ Artist: ${artist}
+╰──────────━⊷\n\n
+${lyrics}`;
 
-        if (!lyrics) {
-            return reply(`❌ Sorry, no lyrics found for "${title}" by ${artist}.`);
-        }
+  try {
+    // Fetch the image
+    const imageResponse = await axios.get(imageUrl, { responseType: 'arraybuffer' });
+    const imageBuffer = Buffer.from(imageResponse.data, 'binary');
 
-        // Create buttons
-        const buttons = [
-            { buttonId: 'copy_lyrics', buttonText: { displayText: 'Copy' }, type: 1 }
-        ];
+    // Send the message with the image and lyrics
+    await zk.sendMessage(
+      dest,
+      {
+        image: imageBuffer,
+        caption: caption
+      },
+      { quoted: ms }
+    );
 
-        // Send message with lyrics and buttons
-        const buttonMessage = {
-            text: `> 🍓DML-MD LYRICS RESULT🍓\n\nTitle🎧 *${title}*\nArtist🗣️ *${artist}*\n\n${lyrics}`,
-            footer: 'Lyrics provided by lyrics.ovh',
-            buttons: buttons,
-            headerType: 1
-        };
-
-        await conn.sendMessage(from, buttonMessage, { quoted: mek });
-
-        // Handle button response
-        conn.on('button_response', async (buttonResponse) => {
-            if (buttonResponse.buttonId === 'copy_lyrics') {
-                await conn.sendMessage(from, { text: '📋 Lyrics copied to clipboard!' }, { quoted: mek });
-            }
-        });
-
-    } catch (error) {
-        console.error("Error fetching lyrics:", error.message);
-
-        if (error.response && error.response.status === 404) {
-            reply("❌ Sorry, no lyrics found for the specified artist and song title.");
-        } else {
-            reply("❌ An error occurred while fetching the lyrics. Please try again later.");
-        }
-    }
+  } catch (error) {
+    console.error('Error fetching or sending image:', error);
+    // Fallback to sending just the text if image fetch fails
+    await sendResponse(caption);
+  }
 });
