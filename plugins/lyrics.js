@@ -1,9 +1,3 @@
-
-
-
-
-
-
 const axios = require('axios');
 const { cmd } = require('../command');
 
@@ -19,7 +13,7 @@ cmd({
 }, async (conn, mek, m, { args, reply }) => {
     try {
         if (args.length < 2) {
-            return reply("❌ Please provide the artist and song title.\nExample: `.lyrics Ed Sheeran - Shape of You`");
+            return reply("❌ Please provide the artist and song title.\nExample: .lyrics Ed Sheeran - Shape of You");
         }
 
         // Parsing input using delimiter
@@ -37,22 +31,22 @@ cmd({
         }
 
         if (!artist || !title) {
-            return reply("❌ Please specify both the artist and the song title.\nExample: `.lyrics \"Joe Dwé Filé\" Shape of You`");
+            return reply("❌ Please specify both the artist and the song title.\nExample: .lyrics \"Joe Dwé Filé\" Shape of You");
         }
 
         // Notify the user that the lyrics are being fetched
-        reply(`🎵 Searching for lyrics of "${title}" BY ${artist}...`);
+        reply(🎵 Searching for lyrics of "${title}" BY ${artist}...);
 
         // Fetch lyrics using an API
-        const response = await axios.get(`https://api.lyrics.ovh/v1/${artist}/${title}`);
+        const response = await axios.get(https://api.dreaded.site/api/lyrics?title=${title});
         const lyrics = response.data.lyrics;
 
         if (!lyrics) {
-            return reply(`❌ Sorry, no lyrics found for "${title}" by ${artist}.`);
+            return reply(❌ Sorry, no lyrics found for "${title}" by ${artist}.);
         }
 
         // Send the lyrics back to the chat
-        reply(`> 🍓DML LYRICS RESULT🍓\n\nTitle🎧 *${title}*\nArtist🗣️ *${artist}*\n\n${lyrics}`);
+        reply(> 🍓DML LYRICS RESULT🍓\n\nTitle🎧 *${title}*\nArtist🗣 *${artist}*\n\n${lyrics});
     } catch (error) {
         console.error("Error fetching lyrics:", error.message);
 
@@ -76,7 +70,7 @@ cmd({
 }, async (conn, mek, m, { args, reply, buttonsMessage }) => {
     try {
         if (args.length < 2) {
-            return reply("❌ Please provide the artist and song title.\nExample: `.lyrics Ed Sheeran - Shape of You`");
+            return reply("❌ Please provide the artist and song title.\nExample: .lyrics Ed Sheeran - Shape of You");
         }
 
         // Parsing input using delimiter
@@ -94,18 +88,18 @@ cmd({
         }
 
         if (!artist || !title) {
-            return reply("❌ Please specify both the artist and the song title.\nExample: `.lyrics \"Joe Dwé Filé\" Shape of You`");
+            return reply("❌ Please specify both the artist and the song title.\nExample: .lyrics \"Joe Dwé Filé\" Shape of You");
         }
 
         // Notify the user that the lyrics are being fetched
-        reply(`🎵 Searching for lyrics of "${title}" by ${artist}...`);
+        reply(🎵 Searching for lyrics of "${title}" by ${artist}...);
 
         // Fetch lyrics using an API
-        const response = await axios.get(`https://api.lyrics.ovh/v1/${encodeURIComponent(artist)}/${encodeURIComponent(title)}`);
+        const response = await axios.get(https://api.lyrics.ovh/v1/${encodeURIComponent(artist)}/${encodeURIComponent(title)});
         const lyrics = response.data.lyrics;
 
         if (!lyrics) {
-            return reply(`❌ Sorry, no lyrics found for "${title}" by ${artist}.`);
+            return reply(❌ Sorry, no lyrics found for "${title}" by ${artist}.);
         }
 
         // Create buttons
@@ -115,7 +109,7 @@ cmd({
 
         // Send message with lyrics and buttons
         const buttonMessage = {
-            text: `> 🍓DML LYRICS RESULT🍓\n\nTitle🎧 *${title}*\nArtist🗣️ *${artist}*\n\n${lyrics}`,
+            text: > 🍓DML LYRICS RESULT🍓\n\nTitle🎧 *${title}*\nArtist🗣 *${artist}*\n\n${lyrics},
             footer: 'Lyrics provided by lyrics.ovh',
             buttons: buttons,
             headerType: 1
