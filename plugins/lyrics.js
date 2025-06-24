@@ -38,7 +38,7 @@ cmd({
         reply(🎵 Searching for lyrics of "${title}" BY ${artist}...);
 
         // Fetch lyrics using an API
-        const response = await axios.get(https://api.dreaded.site/api/lyrics?title=${title});
+        const response = await axios.get(https://api.lyrics.ovh/v1/${artist}/${title});
         const lyrics = response.data.lyrics;
 
         if (!lyrics) {
