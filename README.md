@@ -1,5 +1,5 @@
 
-<h2 align="center" style="color: #FF6347; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); animation: glow 2s infinite alternate;">🔰WELCOME TO ROCK-NET🔰</h2>
+<h2 align="center" style="color: #FF6347; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); animation: glow 2s infinite alternate;">🔰WELCOME TO DML-MD.🔰</h2>
 <h3 align="center" style="color: #1BAFBA; font-weight: bold;">Powerful WhatsApp Bot for Tanzania</h3>
 
 <p align="center">
@@ -12,7 +12,7 @@
 
 ## 📊 GitHub Stats
 <p align="center">
-  <a href="https://github.com/MLILA17/ROCK-NET">
+  <a href="https://github.com/MLILA17/DML-MD.">
     <img src="https://github-readme-stats.vercel.app/api?username=MLILA17&show_icons=true&theme=radical&include_all_commits=true" alt="GitHub Stats" width="400">
     <img src="https://github-readme-streak-stats.herokuapp.com/?user=MLILA17&theme=dark&fire=FF6347&currStreakNum=1BAFBA" alt="Streak Stats" width="400">
 
@@ -42,8 +42,8 @@
 Help support the project by clicking the buttons below. Fork it to your GitHub and give it a star!
 
 
-[![Fork](https://img.shields.io/github/forks/MLILA17/ROCK-NET?label=Fork&style=for-the-badge&logo=git)](https://github.com/MLILA17/ROCK-NET/fork)
-[![Star](https://img.shields.io/github/stars/MLILA17/ROCK-NET?label=Star&style=for-the-badge&logo=github)](https://github.com/MLILA17/ROCK-NET/stargazers)
+[![Fork](https://img.shields.io/github/forks/MLILA17/ROCK-NET?label=Fork&style=for-the-badge&logo=git)](https://github.com/MLILA17/DML-MD/fork)
+[![Star](https://img.shields.io/github/stars/MLILA17/ROCK-NET?label=Star&style=for-the-badge&logo=github)](https://github.com/MLILA17/DML-MD/stargazers)
 
 
 ---
@@ -60,7 +60,7 @@ You need a session to connect your bot. Choose your preferred method:
 ### 🔹 Step 3: Deploy with One Click
 Easily deploy to Heroku with the button below:
 
-[![Deploy](https://img.shields.io/badge/DEPLOY_TO_HEROKU-430098?style=for-the-badge&logo=heroku&logoColor=white)](https://dashboard.heroku.com/new?template=https://github.com/MLILA17/ROCK-NET)
+[![Deploy](https://img.shields.io/badge/DEPLOY_TO_HEROKU-430098?style=for-the-badge&logo=heroku&logoColor=white)](https://dashboard.heroku.com/new?template=https://github.com/MLILA17/DML-MD)
 </div>
 
 ---
