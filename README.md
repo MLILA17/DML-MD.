@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <img alt="ROCK-NET" width="700" height="300" src="https://files.catbox.moe/vcdwmp.jpg">
+  <img alt="DML-MD." width="700" height="300" src="https://files.catbox.moe/vcdwmp.jpg">
 </p>
 
 ## 📊 GitHub Stats
@@ -43,7 +43,7 @@ Help support the project by clicking the buttons below. Fork it to your GitHub a
 
 
 [![Fork](https://img.shields.io/github/forks/MLILA17/ROCK-NET?label=Fork&style=for-the-badge&logo=git)](https://github.com/MLILA17/DML-MD/fork)
-[![Star](https://img.shields.io/github/stars/MLILA17/ROCK-NET?label=Star&style=for-the-badge&logo=github)](https://github.com/MLILA17/DML-MD/stargazers)
+[![Star](https://img.shields.io/github/stars/MLILA17/DML-MD.?label=Star&style=for-the-badge&logo=github)](https://github.com/MLILA17/DML-MD/stargazers)
 
 
 ---
@@ -53,14 +53,14 @@ You need a session to connect your bot. Choose your preferred method:
 
 [![Scan QR Code](https://img.shields.io/badge/SCAN_QR-FF6347?style=for-the-badge&logo=qr-code&logoColor=white)](https://dml-md-sessions.onrender.com/wasiqr) 
 
-[![Pair Device](https://img.shields.io/badge/GET_PAIR_CODE-1BAFBA?style=for-the-badge&logo=connectdevelop&logoColor=white)](https://dmlactive.onrender.com)
+[![Pair Device](https://img.shields.io/badge/GET_PAIR_CODE-1BAFBA?style=for-the-badge&logo=connectdevelop&logoColor=white)](https://dml-md-sessions.onrender.com)
 
 ---
 
 ### 🔹 Step 3: Deploy with One Click
 Easily deploy to Heroku with the button below:
 
-[![Deploy](https://img.shields.io/badge/DEPLOY_TO_HEROKU-430098?style=for-the-badge&logo=heroku&logoColor=white)](https://dashboard.heroku.com/new?template=https://github.com/MLILA17/DML-MD)
+[![Deploy](https://img.shields.io/badge/DEPLOY_TO_HEROKU-430098?style=for-the-badge&logo=heroku&logoColor=white)](https://dashboard.heroku.com/new?template=https://github.com/MLILA17/DML-MD.)
 </div>
 
 ---
