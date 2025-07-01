@@ -26,7 +26,19 @@
 
 
 
+## 🚦 SEE All ACTIVE DML-MD BOTS
 
+<p align="center">
+  <a href="https://dml-bot-active.vercel.app" target="_blank">
+    <button style="background-color: #1BAFBA; color: white; border: none; padding: 15px 30px; font-size: 1.2em; border-radius: 8px; cursor: pointer;">
+      👀 SEE ALL CONNECTED DML-MD BOTS
+    </button>
+  </a>
+</p>
+
+<p align="center">
+  Click the button above to see an up-to-date list of all DML-MD bots currently connected and active!
+</p>
 
 
 ---
