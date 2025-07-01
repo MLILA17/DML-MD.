@@ -25,45 +25,6 @@
 </p>
 
 
-## 🚦 See All Active DML-MD Bots
-
-<div align="center">
-  <a href="https://dml-bot-active.vercel.app" target="_blank" class="dml-bots-link">
-    <span class="dml-bots-btn">
-      👀 SEE ALL CONNECTED DML-MD BOTS
-    </span>
-  </a>
-</div>
-
-<div align="center" style="margin-top:10px;">
-  Click the button above to see an up-to-date list of all DML-MD bots currently connected and active!
-</div>
-
-<style>
-.dml-bots-link {
-  text-decoration: none;
-}
-
-.dml-bots-btn {
-  display: inline-block;
-  background-color: #1BAFBA;
-  color: white;
-  padding: 15px 30px;
-  font-size: 1.2em;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(27,175,186,0.15);
-  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-  border: none;
-  outline: none;
-}
-.dml-bots-btn:hover, .dml-bots-btn:focus {
-  background: #189fa7;
-  transform: translateY(-2px) scale(1.03);
-  box-shadow: 0 4px 16px rgba(27,175,186,0.25);
-}
-</style>
 
 ---
 
